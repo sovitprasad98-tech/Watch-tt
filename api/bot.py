@@ -6,8 +6,8 @@ import requests
 app = Flask(__name__)
 
 # ── Config ──────────────────────────────────────────
-BOT_TOKEN    = os.environ.get("BOT_TOKEN", "8685185882:AAFtitN3KbiKswMnhPLYpOytKtWa_A8kmrI")
-MINI_APP_URL = os.environ.get("MINI_APP_URL", "https://dropify-exe.vercel.app/u/watch")
+BOT_TOKEN    = os.environ.get("BOT_TOKEN", "8441549455:AAFbMkAixu4L0joOElC8pTWESTyXVDsHCA4")
+MINI_APP_URL = os.environ.get("MINI_APP_URL", "https://ads-sovitx.vercel.app")
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 # ── Helper ───────────────────────────────────────────
@@ -113,7 +113,7 @@ def webhook():
 def index():
     return jsonify({
         "status": "running",
-        "bot": "@WatchEarnSxBot",
+        "bot": "@ads_sovitx_bot",
         "mini_app": MINI_APP_URL
     })
 
