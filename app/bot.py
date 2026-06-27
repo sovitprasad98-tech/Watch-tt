@@ -4,9 +4,9 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
-BOT_TOKEN    = os.environ.get("BOT_TOKEN",    "8685185882:AAFtitN3KbiKswMnhPLYpOytKtWa_A8kmrI")
-MINI_APP_URL = os.environ.get("MINI_APP_URL", "https://dropify-exe.vercel.app/u/watch")
-FB_DB_URL    = os.environ.get("FB_DB_URL",    "https://watch-1784a-default-rtdb.firebaseio.com")
+BOT_TOKEN    = os.environ.get("BOT_TOKEN",    "8611107910:AAFrsF57clxJnoRDMouzi6TztWwD7PqyVxI")
+MINI_APP_URL = os.environ.get("MINI_APP_URL", "https://ads-sovitx.vercel.app")
+FB_DB_URL    = os.environ.get("FB_DB_URL",    "https://digit-product-default-rtdb.firebaseio.com")
 TELEGRAM_API = f"https://api.telegram.org/bot{BOT_TOKEN}"
 
 # ── Firebase REST ─────────────────────────────────
@@ -116,7 +116,7 @@ def send_referral(chat_id, tg_id):
         tg("sendMessage", {"chat_id": chat_id, "text": "⚠️ Please open the app first to generate your referral code."})
         return
 
-    ref_link = f"https://t.me/WatchEarnSxBot?start={ref_code}"
+    ref_link = f"https://t.me/ads_sovitx_bot?start={ref_code}"
     tg("sendMessage", {
         "chat_id":    chat_id,
         "parse_mode": "Markdown",
@@ -197,7 +197,7 @@ def webhook():
 
 @app.route("/", methods=["GET"])
 def index():
-    return jsonify({"status": "running", "bot": "@WatchEarnSxBot"})
+    return jsonify({"status": "running", "bot": "@ads_sovitx_bot"})
 
 @app.route("/set-webhook", methods=["GET"])
 def set_webhook():
